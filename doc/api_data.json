@@ -65,7 +65,7 @@
       ]
     },
     "version": "0.0.0",
-    "filename": "../Clothet-API/routes/api/items.js",
+    "filename": "../routes/api/items.js",
     "groupTitle": "items"
   },
   {
@@ -134,7 +134,7 @@
       ]
     },
     "version": "0.0.0",
-    "filename": "../Clothet-API/routes/api/items.js",
+    "filename": "../routes/api/items.js",
     "groupTitle": "items"
   },
   {
@@ -183,7 +183,7 @@
       ]
     },
     "version": "0.0.0",
-    "filename": "../Clothet-API/routes/api/items.js",
+    "filename": "../routes/api/items.js",
     "groupTitle": "items"
   },
   {
@@ -252,7 +252,7 @@
       ]
     },
     "version": "0.0.0",
-    "filename": "../Clothet-API/routes/api/members.js",
+    "filename": "../routes/api/members.js",
     "groupTitle": "members"
   },
   {
@@ -307,7 +307,7 @@
       ]
     },
     "version": "0.0.0",
-    "filename": "../Clothet-API/routes/api/members.js",
+    "filename": "../routes/api/members.js",
     "groupTitle": "members"
   },
   {
@@ -383,7 +383,7 @@
       ]
     },
     "version": "0.0.0",
-    "filename": "../Clothet-API/routes/api/members.js",
+    "filename": "../routes/api/members.js",
     "groupTitle": "members"
   },
   {
@@ -437,7 +437,7 @@
       ]
     },
     "version": "0.0.0",
-    "filename": "../Clothet-API/routes/api/members.js",
+    "filename": "../routes/api/members.js",
     "groupTitle": "members"
   }
 ]
