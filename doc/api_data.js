@@ -109,7 +109,7 @@ define({ "api": [
       "examples": [
         {
           "title": "Success-Response:",
-          "content": "HTTP/1.1 200 OK",
+          "content": "    HTTP/1.1 200 OK\n[\n  {\n    \"id\": 12,\n    \"name\": \"連帽風衣外套-男\",\n    \"image\": \"http://s3.lativ.com.tw/i/23047/23047_L_51.jpg,http://s4.lativ.com.tw/i/23047/23047_L_52.jpg\",\n    \"category\": \"外套類\",\n    \"sub_category\": \"外套・風衣・大衣\",\n    \"price\": \"225\",\n    \"brand\": \"lativ\",\n    \"pattern\": \"風衣．大衣\",\n    \"target\": \"men\",\n    \"size\": null,\n    \"serial_no\": \"23047\",\n    \"created_at\": \"2016-12-11T12:47:42.000Z\",\n    \"updated_at\": \"2016-12-11T12:47:43.000Z\"\n  },\n  {\n    \"id\": 13,\n    \"name\": \"連帽風衣外套-女\",\n    \"image\": \"http://s1.lativ.com.tw/i/23050/23050_L_60.jpg,http://s2.lativ.com.tw/i/23050/23050_L_61_0.jpg\",\n    \"category\": \"外套類\",\n    \"sub_category\": \"外套・風衣・大衣\",\n    \"price\": \"225\",\n    \"brand\": \"lativ\",\n    \"pattern\": \"風衣．大衣\",\n    \"target\": \"women\",\n    \"size\": null,\n    \"serial_no\": \"23050\",\n    \"created_at\": \"2016-12-11T12:47:42.000Z\",\n    \"updated_at\": \"2016-12-11T12:47:43.000Z\"\n  },\n  {\n    \"id\": 65,\n    \"name\": \"吸排抗UV連帽外套-女\",\n    \"image\": \"http://s3.lativ.com.tw/i/25234/25234_L_61.jpg,http://s4.lativ.com.tw/i/25234/25234_L_62.gif\",\n    \"category\": \"外套類\",\n    \"sub_category\": \"外套・風衣・大衣\",\n    \"price\": \"490\",\n    \"brand\": \"lativ\",\n    \"pattern\": \"休閒外套\",\n    \"target\": \"women\",\n    \"size\": null,\n    \"serial_no\": \"25234\",\n    \"created_at\": \"2016-12-11T12:47:42.000Z\",\n    \"updated_at\": \"2016-12-11T12:47:43.000Z\"\n  }\n]",
           "type": "json"
         }
       ]
