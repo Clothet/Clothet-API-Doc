@@ -197,14 +197,14 @@ define({ "api": [
         "Parameter": [
           {
             "group": "Parameter",
-            "type": "number",
+            "type": "string",
             "optional": false,
             "field": "category",
             "description": "<p>分類</p>"
           },
           {
             "group": "Parameter",
-            "type": "number",
+            "type": "string",
             "optional": false,
             "field": "sub_category",
             "description": "<p>次分類</p>"
