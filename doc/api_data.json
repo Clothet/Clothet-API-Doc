@@ -71,29 +71,9 @@
   {
     "type": "get",
     "url": "/api/item_combinations",
-    "title": "List",
-    "name": "item_combinations_list",
+    "title": "Show",
+    "name": "item_combinations_show",
     "group": "item_combinations",
-    "parameter": {
-      "fields": {
-        "Parameter": [
-          {
-            "group": "Parameter",
-            "type": "number",
-            "optional": false,
-            "field": "offset",
-            "description": ""
-          },
-          {
-            "group": "Parameter",
-            "type": "number",
-            "optional": false,
-            "field": "limit",
-            "description": ""
-          }
-        ]
-      }
-    },
     "success": {
       "fields": {
         "Success 200": [
