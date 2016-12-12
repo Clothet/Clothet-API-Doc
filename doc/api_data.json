@@ -1,6 +1,144 @@
 [
   {
     "type": "get",
+    "url": "/api/item_combinations",
+    "title": "List",
+    "name": "item_combinations_list",
+    "group": "item_combinations",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "number",
+            "optional": false,
+            "field": "offset",
+            "description": ""
+          },
+          {
+            "group": "Parameter",
+            "type": "number",
+            "optional": false,
+            "field": "limit",
+            "description": ""
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "bool",
+            "optional": false,
+            "field": "success",
+            "description": "<p>success</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": " HTTP/1.1 200 OK\n [\n  {\n    \"combination_id\": 0,\n    \"item_ids\": \"28123055,28373205,28465042,28925031\"\n  },\n  {\n    \"combination_id\": 1,\n    \"item_ids\": \"28022065,28116045,28587031\"\n  },\n  {\n    \"combination_id\": 2,\n    \"item_ids\": \"28454064,28519044,28553065,28565055\"\n  },\n  {\n    \"combination_id\": 3,\n    \"item_ids\": \"28137045,28352089,28466024\"\n  },\n  {\n    \"combination_id\": 4,\n    \"item_ids\": \"28122055,28374065,28925031\"\n  }\n]",
+          "type": "json"
+        }
+      ]
+    },
+    "error": {
+      "fields": {
+        "Error 4xx": [
+          {
+            "group": "Error 4xx",
+            "optional": false,
+            "field": "ServerError",
+            "description": "<p>server internal error</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Error-Response:",
+          "content": "HTTP/1.1 500 error\n{\n  \"error\": err_object\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "../routes/api/item_combinations.js",
+    "groupTitle": "item_combinations"
+  },
+  {
+    "type": "get",
+    "url": "/api/item_combinations",
+    "title": "List",
+    "name": "item_combinations_list",
+    "group": "item_combinations",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "number",
+            "optional": false,
+            "field": "offset",
+            "description": ""
+          },
+          {
+            "group": "Parameter",
+            "type": "number",
+            "optional": false,
+            "field": "limit",
+            "description": ""
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "bool",
+            "optional": false,
+            "field": "success",
+            "description": "<p>success</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": " HTTP/1.1 200 OK\n[\n  {\n    \"id\": 34,\n    \"item_style_id\": 26329031,\n    \"combination_id\": 9,\n    \"category\": \"women\",\n    \"image\": \"http://s1.lativ.com.tw/i/28118/28118_L_07_0.jpg\",\n    \"created_at\": \"2016-12-12T08:38:28.000Z\",\n    \"updated_at\": \"2016-12-12T08:38:28.000Z\",\n    \"items\": {\n      \"id\": \"26329031\",\n      \"item_serial_no\": 26329,\n      \"image\": \"/i/26329/26329031/2632903_500.jpg\",\n      \"color\": \"藏青\",\n      \"size\": \"S\",\n      \"created_at\": \"2016-12-12T08:37:29.000Z\",\n      \"updated_at\": \"2016-12-12T08:37:29.000Z\"\n    }\n  },\n  {\n    \"id\": 37,\n    \"item_style_id\": 28926021,\n    \"combination_id\": 9,\n    \"category\": \"women\",\n    \"image\": \"http://s1.lativ.com.tw/i/28118/28118_L_07_0.jpg\",\n    \"created_at\": \"2016-12-12T08:38:28.000Z\",\n    \"updated_at\": \"2016-12-12T08:38:28.000Z\",\n    \"items\": {\n      \"id\": \"28926021\",\n      \"item_serial_no\": 28926,\n      \"image\": \"/i/28926/28926021/2892602_500.jpg\",\n      \"color\": \"鐵灰\",\n      \"size\": \"F\",\n      \"created_at\": \"2016-12-12T08:37:15.000Z\",\n      \"updated_at\": \"2016-12-12T08:37:15.000Z\"\n    }\n  },\n  {\n    \"id\": 35,\n    \"item_style_id\": 28118055,\n    \"combination_id\": 9,\n    \"category\": \"women\",\n    \"image\": \"http://s1.lativ.com.tw/i/28118/28118_L_07_0.jpg\",\n    \"created_at\": \"2016-12-12T08:38:28.000Z\",\n    \"updated_at\": \"2016-12-12T08:38:28.000Z\",\n    \"items\": null\n  },\n  {\n    \"id\": 36,\n    \"item_style_id\": 28588033,\n    \"combination_id\": 9,\n    \"category\": \"women\",\n    \"image\": \"http://s1.lativ.com.tw/i/28118/28118_L_07_0.jpg\",\n    \"created_at\": \"2016-12-12T08:38:28.000Z\",\n    \"updated_at\": \"2016-12-12T08:38:28.000Z\",\n    \"items\": null\n  }\n]",
+          "type": "json"
+        }
+      ]
+    },
+    "error": {
+      "fields": {
+        "Error 4xx": [
+          {
+            "group": "Error 4xx",
+            "optional": false,
+            "field": "ServerError",
+            "description": "<p>server internal error</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Error-Response:",
+          "content": "HTTP/1.1 500 error\n{\n  \"error\": err_object\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "../routes/api/item_combinations.js",
+    "groupTitle": "item_combinations"
+  },
+  {
+    "type": "get",
     "url": "/api/items",
     "title": "List",
     "name": "items_list",
