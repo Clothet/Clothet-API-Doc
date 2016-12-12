@@ -208,6 +208,20 @@ define({ "api": [
             "optional": false,
             "field": "sub_category",
             "description": "<p>次分類</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "string",
+            "optional": false,
+            "field": "name",
+            "description": "<p>關鍵字</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "string",
+            "optional": false,
+            "field": "target",
+            "description": "<p>客群 (men/woman/sport)</p>"
           }
         ]
       }
