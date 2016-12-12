@@ -1,5 +1,175 @@
 define({ "api": [
   {
+    "type": "post",
+    "url": "/api/equipments/:id",
+    "title": "Add",
+    "name": "equipments_add",
+    "group": "equipments",
+    "description": "<p>加入自己的裝備，需登入</p>",
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "bool",
+            "optional": false,
+            "field": "success",
+            "description": "<p>success</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "HTTP/1.1 200 OK",
+          "type": "json"
+        }
+      ]
+    },
+    "error": {
+      "fields": {
+        "Error 4xx": [
+          {
+            "group": "Error 4xx",
+            "optional": false,
+            "field": "ServerError",
+            "description": "<p>server internal error</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Error-Response:",
+          "content": "HTTP/1.1 500 error",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "../routes/api/equipments.js",
+    "groupTitle": "equipments"
+  },
+  {
+    "type": "delete",
+    "url": "/api/equipments/:id",
+    "title": "Delete",
+    "name": "equipments_delete",
+    "group": "equipments",
+    "description": "<p>移除自己的裝備，需登入</p>",
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "bool",
+            "optional": false,
+            "field": "success",
+            "description": "<p>success</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "HTTP/1.1 200 OK",
+          "type": "json"
+        }
+      ]
+    },
+    "error": {
+      "fields": {
+        "Error 4xx": [
+          {
+            "group": "Error 4xx",
+            "optional": false,
+            "field": "ServerError",
+            "description": "<p>server internal error</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Error-Response:",
+          "content": "HTTP/1.1 500 error",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "../routes/api/equipments.js",
+    "groupTitle": "equipments"
+  },
+  {
+    "type": "get",
+    "url": "/api/equipments",
+    "title": "List",
+    "name": "equipments_list",
+    "group": "equipments",
+    "description": "<p>列出自己的裝備，需要登入</p>",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "number",
+            "optional": false,
+            "field": "offset",
+            "description": ""
+          },
+          {
+            "group": "Parameter",
+            "type": "number",
+            "optional": false,
+            "field": "limit",
+            "description": ""
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "bool",
+            "optional": false,
+            "field": "success",
+            "description": "<p>success</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "HTTP/1.1 200 OK\n[\n    {\n        \"serial_no\": 16468,\n        \"name\": \"純棉經典帆布休閒鞋-男\",\n        \"image\": \"http://s1.lativ.com.tw/i/16468/16468_L_51.jpg,http://s2.lativ.com.tw/i/16468/16468_L_52.jpg\",\n        \"category\": \"家居服&配件\",\n        \"sub_category\": \"鞋類\",\n        \"price\": \"339\",\n        \"brand\": \"lativ\",\n        \"pattern\": \"帆布鞋\",\n        \"target\": \"men\",\n        \"created_at\": \"2016-12-12T14:36:38.000Z\",\n        \"updated_at\": \"2016-12-12T14:36:39.000Z\"\n    },\n    {\n        \"serial_no\": 16469,\n        \"name\": \"純棉經典帆布休閒鞋-女\",\n        \"image\": \"http://s3.lativ.com.tw/i/16469/16469_L_51.jpg,http://s4.lativ.com.tw/i/16469/16469_L_52.jpg\",\n        \"category\": \"家居服&配件\",\n        \"sub_category\": \"鞋類\",\n        \"price\": \"339\",\n        \"brand\": \"lativ\",\n        \"pattern\": \"帆布鞋\",\n        \"target\": \"women\",\n        \"created_at\": \"2016-12-12T14:36:38.000Z\",\n        \"updated_at\": \"2016-12-12T14:36:39.000Z\"\n    }\n]",
+          "type": "json"
+        }
+      ]
+    },
+    "error": {
+      "fields": {
+        "Error 4xx": [
+          {
+            "group": "Error 4xx",
+            "optional": false,
+            "field": "ServerError",
+            "description": "<p>server internal error</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Error-Response:",
+          "content": "HTTP/1.1 500 error\n{\n  \"error\": err_object\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "../routes/api/equipments.js",
+    "groupTitle": "equipments"
+  },
+  {
     "type": "get",
     "url": "/api/item_combinations",
     "title": "List",
@@ -70,7 +240,7 @@ define({ "api": [
   },
   {
     "type": "get",
-    "url": "/api/item_combinations",
+    "url": "/api/item_combinations/:id",
     "title": "Show",
     "name": "item_combinations_show",
     "group": "item_combinations",
