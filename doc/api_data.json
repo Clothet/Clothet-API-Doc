@@ -1,7 +1,7 @@
 [
   {
     "type": "post",
-    "url": "/api/equipments/:id",
+    "url": "/api/equipments/:item_id",
     "title": "Add",
     "name": "equipments_add",
     "group": "equipments",
@@ -21,7 +21,7 @@
       "examples": [
         {
           "title": "Success-Response:",
-          "content": "HTTP/1.1 200 OK",
+          "content": "HTTP/1.1 201 OK",
           "type": "json"
         }
       ]
@@ -51,7 +51,7 @@
   },
   {
     "type": "delete",
-    "url": "/api/equipments/:id",
+    "url": "/api/equipments/:item_id",
     "title": "Delete",
     "name": "equipments_delete",
     "group": "equipments",
@@ -71,7 +71,7 @@
       "examples": [
         {
           "title": "Success-Response:",
-          "content": "HTTP/1.1 200 OK",
+          "content": "HTTP/1.1 201 OK",
           "type": "json"
         }
       ]
@@ -170,6 +170,106 @@
     "groupTitle": "equipments"
   },
   {
+    "type": "post",
+    "url": "/api/favorites/:combination_id",
+    "title": "Add",
+    "name": "favorites_add",
+    "group": "favorites",
+    "description": "<p>收藏組合，需登入</p>",
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "bool",
+            "optional": false,
+            "field": "success",
+            "description": "<p>success</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "HTTP/1.1 201 OK",
+          "type": "json"
+        }
+      ]
+    },
+    "error": {
+      "fields": {
+        "Error 4xx": [
+          {
+            "group": "Error 4xx",
+            "optional": false,
+            "field": "ServerError",
+            "description": "<p>server internal error</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Error-Response:",
+          "content": "HTTP/1.1 500 error",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "../routes/api/favorites.js",
+    "groupTitle": "favorites"
+  },
+  {
+    "type": "delete",
+    "url": "/api/favorites/:combination_id",
+    "title": "Remove",
+    "name": "favorites_remove",
+    "group": "favorites",
+    "description": "<p>取消收藏組合，需登入</p>",
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "bool",
+            "optional": false,
+            "field": "success",
+            "description": "<p>success</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "HTTP/1.1 201 OK",
+          "type": "json"
+        }
+      ]
+    },
+    "error": {
+      "fields": {
+        "Error 4xx": [
+          {
+            "group": "Error 4xx",
+            "optional": false,
+            "field": "ServerError",
+            "description": "<p>server internal error</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Error-Response:",
+          "content": "HTTP/1.1 500 error",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "../routes/api/favorites.js",
+    "groupTitle": "favorites"
+  },
+  {
     "type": "get",
     "url": "/api/item_combinations",
     "title": "List",
@@ -240,7 +340,7 @@
   },
   {
     "type": "get",
-    "url": "/api/item_combinations/:id",
+    "url": "/api/item_combinations/:combination_id",
     "title": "Show",
     "name": "item_combinations_show",
     "group": "item_combinations",
