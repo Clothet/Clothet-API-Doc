@@ -340,6 +340,68 @@ define({ "api": [
   },
   {
     "type": "get",
+    "url": "/api/item_combinations/search",
+    "title": "Search",
+    "name": "item_combinations_search",
+    "group": "item_combinations",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "number",
+            "optional": false,
+            "field": "item_id",
+            "description": "<p>A item's id</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "bool",
+            "optional": false,
+            "field": "success",
+            "description": "<p>success</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "HTTP/1.1 200 OK\n[\n    {\n        \"combination_id\": 0,\n        \"item_ids\": \"2846504,2837320,2892503,2812305\",\n        \"details\": [\n            {\n                \"id\": \"2812305\",\n                \"item_serial_no\": 28123,\n                \"image\": \"/i/28123/28123051/2812305_500.jpg\",\n                \"color\": \"黑色\",\n                \"size\": \"S,M,L,XL,XXL\",\n                \"created_at\": \"2016-12-12T14:37:18.000Z\",\n                \"updated_at\": \"2016-12-12T14:37:18.000Z\"\n            },\n            {\n                \"id\": \"2837320\",\n                \"item_serial_no\": 28373,\n                \"image\": \"/i/28373/28373201/2837320_500.jpg\",\n                \"color\": \"藍綠格\",\n                \"size\": \"S,M,L,XL,XXL\",\n                \"created_at\": \"2016-12-12T14:37:18.000Z\",\n                \"updated_at\": \"2016-12-12T14:37:18.000Z\"\n            },\n            {\n                \"id\": \"2846504\",\n                \"item_serial_no\": 28465,\n                \"image\": \"/i/28465/28465041/2846504_500.jpg\",\n                \"color\": \"黑色\",\n                \"size\": \"M,L\",\n                \"created_at\": \"2016-12-12T14:37:18.000Z\",\n                \"updated_at\": \"2016-12-12T14:37:18.000Z\"\n            },\n            {\n                \"id\": \"2892503\",\n                \"item_serial_no\": 28925,\n                \"image\": \"/i/28925/28925031/2892503_500.jpg\",\n                \"color\": \"藏青\",\n                \"size\": \"F\",\n                \"created_at\": \"2016-12-12T14:37:16.000Z\",\n                \"updated_at\": \"2016-12-12T14:37:16.000Z\"\n            }\n        ]\n    },\n    {\n        \"combination_id\": 1,\n        \"item_ids\": \"2802206,2811604,2858703\",\n        \"details\": [\n            {\n                \"id\": \"2802206\",\n                \"item_serial_no\": 28022,\n                \"image\": \"/i/28022/28022061/2802206_500.jpg\",\n                \"color\": \"黑色雪花\",\n                \"size\": \"S,M,L,XL,XXL\",\n                \"created_at\": \"2016-12-12T14:37:17.000Z\",\n                \"updated_at\": \"2016-12-12T14:37:17.000Z\"\n            },\n            {\n                \"id\": \"2811604\",\n                \"item_serial_no\": 28116,\n                \"image\": \"/i/28116/28116041/2811604_500.jpg\",\n                \"color\": \"黑色\",\n                \"size\": \"S,M,L,XL,XXL\",\n                \"created_at\": \"2016-12-12T14:37:18.000Z\",\n                \"updated_at\": \"2016-12-12T14:37:18.000Z\"\n            },\n            {\n                \"id\": \"2858703\",\n                \"item_serial_no\": 28587,\n                \"image\": \"/i/28587/28587031/2858703_500.jpg\",\n                \"color\": \"黑色\",\n                \"size\": \"S\",\n                \"created_at\": \"2016-12-12T14:37:18.000Z\",\n                \"updated_at\": \"2016-12-12T14:37:18.000Z\"\n            }\n        ]\n    }\n]",
+          "type": "json"
+        }
+      ]
+    },
+    "error": {
+      "fields": {
+        "Error 4xx": [
+          {
+            "group": "Error 4xx",
+            "optional": false,
+            "field": "ServerError",
+            "description": "<p>server internal error</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Error-Response:",
+          "content": "HTTP/1.1 500 error\n{\n  \"error\": err_object\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "../routes/api/item_combinations.js",
+    "groupTitle": "item_combinations"
+  },
+  {
+    "type": "get",
     "url": "/api/item_combinations/:combination_id",
     "title": "Show",
     "name": "item_combinations_show",
