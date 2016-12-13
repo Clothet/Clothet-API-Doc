@@ -651,55 +651,6 @@
     "groupTitle": "items"
   },
   {
-    "type": "get",
-    "url": "/api/items/details/:style_id",
-    "title": "Show Detail",
-    "name": "items_show_detail",
-    "group": "items",
-    "success": {
-      "fields": {
-        "Success 200": [
-          {
-            "group": "Success 200",
-            "type": "bool",
-            "optional": false,
-            "field": "success",
-            "description": "<p>success</p>"
-          }
-        ]
-      },
-      "examples": [
-        {
-          "title": "Success-Response:",
-          "content": "HTTP/1.1 200 OK\n{\n    \"id\": \"1646801\",\n    \"item_serial_no\": 16468,\n    \"image\": \"/i/16468/16468011/1646801_500.jpg\",\n    \"color\": \"灰卡其\",\n    \"size\": \"7,7.5,8,8.5,9,9.5,10,10.5\",\n    \"created_at\": \"2016-12-13T05:46:02.000Z\",\n    \"updated_at\": \"2016-12-13T05:46:02.000Z\",\n    \"item\": {\n        \"serial_no\": 16468,\n        \"name\": \"純棉經典帆布休閒鞋-男\",\n        \"image\": \"http://s1.lativ.com.tw/i/16468/16468_L_51.jpg,http://s2.lativ.com.tw/i/16468/16468_L_52.jpg\",\n        \"category\": \"家居服&配件\",\n        \"sub_category\": \"鞋類\",\n        \"price\": \"339\",\n        \"brand\": \"lativ\",\n        \"pattern\": \"帆布鞋\",\n        \"target\": \"men\",\n        \"created_at\": \"2016-12-13T05:45:11.000Z\",\n        \"updated_at\": \"2016-12-13T05:45:12.000Z\"\n    }\n}",
-          "type": "json"
-        }
-      ]
-    },
-    "error": {
-      "fields": {
-        "Error 4xx": [
-          {
-            "group": "Error 4xx",
-            "optional": false,
-            "field": "ServerError",
-            "description": "<p>server internal error</p>"
-          }
-        ]
-      },
-      "examples": [
-        {
-          "title": "Error-Response:",
-          "content": "HTTP/1.1 500 error\n{\n  \"error\": err_object\n}",
-          "type": "json"
-        }
-      ]
-    },
-    "version": "0.0.0",
-    "filename": "../routes/api/items.js",
-    "groupTitle": "items"
-  },
-  {
     "type": "post",
     "url": "/api/members/login",
     "title": "Login",
