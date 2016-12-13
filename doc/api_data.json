@@ -554,6 +554,20 @@
             "optional": false,
             "field": "target",
             "description": "<p>客群 (men/woman/sport)</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "number",
+            "optional": false,
+            "field": "offset",
+            "description": ""
+          },
+          {
+            "group": "Parameter",
+            "type": "number",
+            "optional": false,
+            "field": "limit",
+            "description": ""
           }
         ]
       }
@@ -623,6 +637,55 @@
         {
           "title": "Success-Response:",
           "content": "HTTP/1.1 200 OK\n{\n    \"serial_no\": \"16469\",\n    \"name\": \"純棉經典帆布休閒鞋-女\",\n    \"image\": \"http://s3.lativ.com.tw/i/16469/16469_L_51.jpg,http://s4.lativ.com.tw/i/16469/16469_L_52.jpg\",\n    \"category\": \"家居服&配件\",\n    \"sub_category\": \"鞋類\",\n    \"price\": \"339\",\n    \"brand\": \"lativ\",\n    \"pattern\": \"帆布鞋\",\n    \"target\": \"women\",\n    \"created_at\": \"2016-12-11T19:04:17.000Z\",\n    \"updated_at\": \"2016-12-11T19:04:18.000Z\",\n    \"styles\": [\n        {\n            \"id\": \"16469022\",\n            \"image\": \"/i/16469/16469021/1646902_500.jpg\",\n            \"color\": \"水綠\",\n            \"size\": \"6,6.5,7\",\n            \"created_at\": \"2016-12-11T19:05:39.000Z\",\n            \"updated_at\": \"2016-12-11T19:05:39.000Z\"\n        },\n        {\n            \"id\": \"16469053\",\n            \"image\": \"/i/16469/16469051/1646905_500.jpg\",\n            \"color\": \"紅色\",\n            \"size\": \"6.5,7,7.5\",\n            \"created_at\": \"2016-12-11T19:05:39.000Z\",\n            \"updated_at\": \"2016-12-11T19:05:39.000Z\"\n        },\n        {\n            \"id\": \"16469062\",\n            \"image\": \"/i/16469/16469061/1646906_500.jpg\",\n            \"color\": \"酒紅\",\n            \"size\": \"6,6.5,7\",\n            \"created_at\": \"2016-12-11T19:05:39.000Z\",\n            \"updated_at\": \"2016-12-11T19:05:39.000Z\"\n        },\n        {\n            \"id\": \"16469072\",\n            \"image\": \"/i/16469/16469071/1646907_500.jpg\",\n            \"color\": \"寶藍\",\n            \"size\": \"6,6.5,7,7.5\",\n            \"created_at\": \"2016-12-11T19:05:39.000Z\",\n            \"updated_at\": \"2016-12-11T19:05:39.000Z\"\n        },\n        {\n            \"id\": \"16469080\",\n            \"image\": \"/i/16469/16469081/1646908_500.jpg\",\n            \"color\": \"灰紫\",\n            \"size\": \"5,6,6.5,7\",\n            \"created_at\": \"2016-12-11T19:05:39.000Z\",\n            \"updated_at\": \"2016-12-11T19:05:39.000Z\"\n        },\n        {\n            \"id\": \"16469090\",\n            \"image\": \"/i/16469/16469091/1646909_500.jpg\",\n            \"color\": \"白色\",\n            \"size\": \"5,5.5,6,6.5,7,7.5,8,8.5\",\n            \"created_at\": \"2016-12-11T19:05:39.000Z\",\n            \"updated_at\": \"2016-12-11T19:05:39.000Z\"\n        },\n        {\n            \"id\": \"16469100\",\n            \"image\": \"/i/16469/16469101/1646910_500.jpg\",\n            \"color\": \"黑色\",\n            \"size\": \"5,5.5,6,6.5,7,7.5,8,8.5\",\n            \"created_at\": \"2016-12-11T19:05:39.000Z\",\n            \"updated_at\": \"2016-12-11T19:05:39.000Z\"\n        },\n        {\n            \"id\": \"16469131\",\n            \"image\": \"/i/16469/16469131/1646913_500.jpg\",\n            \"color\": \"藏青\",\n            \"size\": \"5.5,6,6.5,7,7.5,8,8.5\",\n            \"created_at\": \"2016-12-11T19:05:39.000Z\",\n            \"updated_at\": \"2016-12-11T19:05:39.000Z\"\n        }\n    ]\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "error": {
+      "fields": {
+        "Error 4xx": [
+          {
+            "group": "Error 4xx",
+            "optional": false,
+            "field": "ServerError",
+            "description": "<p>server internal error</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Error-Response:",
+          "content": "HTTP/1.1 500 error\n{\n  \"error\": err_object\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "../routes/api/items.js",
+    "groupTitle": "items"
+  },
+  {
+    "type": "get",
+    "url": "/api/items/details/:style_id",
+    "title": "Show Detail",
+    "name": "items_show_detail",
+    "group": "items",
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "bool",
+            "optional": false,
+            "field": "success",
+            "description": "<p>success</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "HTTP/1.1 200 OK\n{\n    \"id\": \"1646801\",\n    \"item_serial_no\": 16468,\n    \"image\": \"/i/16468/16468011/1646801_500.jpg\",\n    \"color\": \"灰卡其\",\n    \"size\": \"7,7.5,8,8.5,9,9.5,10,10.5\",\n    \"created_at\": \"2016-12-13T05:46:02.000Z\",\n    \"updated_at\": \"2016-12-13T05:46:02.000Z\",\n    \"item\": {\n        \"serial_no\": 16468,\n        \"name\": \"純棉經典帆布休閒鞋-男\",\n        \"image\": \"http://s1.lativ.com.tw/i/16468/16468_L_51.jpg,http://s2.lativ.com.tw/i/16468/16468_L_52.jpg\",\n        \"category\": \"家居服&配件\",\n        \"sub_category\": \"鞋類\",\n        \"price\": \"339\",\n        \"brand\": \"lativ\",\n        \"pattern\": \"帆布鞋\",\n        \"target\": \"men\",\n        \"created_at\": \"2016-12-13T05:45:11.000Z\",\n        \"updated_at\": \"2016-12-13T05:45:12.000Z\"\n    }\n}",
           "type": "json"
         }
       ]
