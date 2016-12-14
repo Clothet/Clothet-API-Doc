@@ -553,7 +553,7 @@ define({ "api": [
             "type": "string",
             "optional": false,
             "field": "target",
-            "description": "<p>客群 (men/woman/sport)</p>"
+            "description": "<p>客群 (men/woman/unisex)</p>"
           },
           {
             "group": "Parameter",
