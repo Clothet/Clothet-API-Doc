@@ -726,7 +726,7 @@ define({ "api": [
             "group": "Parameter",
             "type": "string",
             "optional": false,
-            "field": "user",
+            "field": "username",
             "description": "<p>member's account(email).</p>"
           },
           {
