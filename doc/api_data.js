@@ -1,7 +1,7 @@
 define({ "api": [
   {
     "type": "post",
-    "url": "/api/equipments/:item_id",
+    "url": "/api/equipments/:item_style_id",
     "title": "Add",
     "name": "equipments_add",
     "group": "equipments",
@@ -51,7 +51,7 @@ define({ "api": [
   },
   {
     "type": "delete",
-    "url": "/api/equipments/:item_id",
+    "url": "/api/equipments/:item_style_id",
     "title": "Delete",
     "name": "equipments_delete",
     "group": "equipments",
@@ -141,7 +141,7 @@ define({ "api": [
       "examples": [
         {
           "title": "Success-Response:",
-          "content": "HTTP/1.1 200 OK\n[\n    {\n        \"serial_no\": 16468,\n        \"name\": \"純棉經典帆布休閒鞋-男\",\n        \"image\": \"http://s1.lativ.com.tw/i/16468/16468_L_51.jpg,http://s2.lativ.com.tw/i/16468/16468_L_52.jpg\",\n        \"category\": \"家居服&配件\",\n        \"sub_category\": \"鞋類\",\n        \"price\": \"339\",\n        \"brand\": \"lativ\",\n        \"pattern\": \"帆布鞋\",\n        \"target\": \"men\",\n        \"created_at\": \"2016-12-12T14:36:38.000Z\",\n        \"updated_at\": \"2016-12-12T14:36:39.000Z\"\n    },\n    {\n        \"serial_no\": 16469,\n        \"name\": \"純棉經典帆布休閒鞋-女\",\n        \"image\": \"http://s3.lativ.com.tw/i/16469/16469_L_51.jpg,http://s4.lativ.com.tw/i/16469/16469_L_52.jpg\",\n        \"category\": \"家居服&配件\",\n        \"sub_category\": \"鞋類\",\n        \"price\": \"339\",\n        \"brand\": \"lativ\",\n        \"pattern\": \"帆布鞋\",\n        \"target\": \"women\",\n        \"created_at\": \"2016-12-12T14:36:38.000Z\",\n        \"updated_at\": \"2016-12-12T14:36:39.000Z\"\n    }\n]",
+          "content": "HTTP/1.1 200 OK\n[\n  {\n    \"id\": \"1646801\",\n    \"item_serial_no\": 16468,\n    \"image\": \"/i/16468/16468011/1646801_500.jpg\",\n    \"color\": \"灰卡其\",\n    \"size\": \"7,7.5,8,8.5,9,9.5,10,10.5\",\n    \"created_at\": \"2016-12-13T05:46:02.000Z\",\n    \"updated_at\": \"2016-12-13T05:46:02.000Z\",\n    \"item\": {\n      \"serial_no\": 16468,\n      \"name\": \"純棉經典帆布休閒鞋-男\",\n      \"image\": \"http://s1.lativ.com.tw/i/16468/16468_L_51.jpg,http://s2.lativ.com.tw/i/16468/16468_L_52.jpg\",\n      \"category\": \"家居服&配件\",\n      \"sub_category\": \"鞋類\",\n      \"price\": \"339\",\n      \"brand\": \"lativ\",\n      \"pattern\": \"帆布鞋\",\n      \"target\": \"men\",\n      \"created_at\": \"2016-12-13T05:45:11.000Z\",\n      \"updated_at\": \"2016-12-13T05:45:12.000Z\"\n    }\n  },\n  {\n    \"id\": \"1646803\",\n    \"item_serial_no\": 16468,\n    \"image\": \"/i/16468/16468031/1646803_500.jpg\",\n    \"color\": \"紅色\",\n    \"size\": \"7.5\",\n    \"created_at\": \"2016-12-13T05:46:02.000Z\",\n    \"updated_at\": \"2016-12-13T05:46:02.000Z\",\n    \"item\": {\n      \"serial_no\": 16468,\n      \"name\": \"純棉經典帆布休閒鞋-男\",\n      \"image\": \"http://s1.lativ.com.tw/i/16468/16468_L_51.jpg,http://s2.lativ.com.tw/i/16468/16468_L_52.jpg\",\n      \"category\": \"家居服&配件\",\n      \"sub_category\": \"鞋類\",\n      \"price\": \"339\",\n      \"brand\": \"lativ\",\n      \"pattern\": \"帆布鞋\",\n      \"target\": \"men\",\n      \"created_at\": \"2016-12-13T05:45:11.000Z\",\n      \"updated_at\": \"2016-12-13T05:45:12.000Z\"\n    }\n  }\n]",
           "type": "json"
         }
       ]
