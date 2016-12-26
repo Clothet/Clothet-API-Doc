@@ -220,6 +220,56 @@
     "groupTitle": "favorites"
   },
   {
+    "type": "get",
+    "url": "/api/favorites",
+    "title": "List",
+    "name": "favorites_list",
+    "group": "favorites",
+    "description": "<p>列出收藏組合，需登入</p>",
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "bool",
+            "optional": false,
+            "field": "success",
+            "description": "<p>success</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "HTTP/1.1 200 OK\n [\n    {\n        \"combination_id\": 2,\n        \"item_ids\": \"2845406,2851904,2855306,2856505\",\n        \"details\": [\n            {\n                \"id\": \"2845406\",\n                \"item_serial_no\": 28454,\n                \"image\": \"/i/28454/28454061/2845406_500.jpg\",\n                \"color\": \"黑色\",\n                \"size\": \"S,M,L,XL\",\n                \"created_at\": \"2016-12-13T05:45:50.000Z\",\n                \"updated_at\": \"2016-12-13T05:45:50.000Z\"\n            },\n            {\n                \"id\": \"2851904\",\n                \"item_serial_no\": 28519,\n                \"image\": \"/i/28519/28519041/2851904_500.jpg\",\n                \"color\": \"深藍\",\n                \"size\": \"S,M,L,XL\",\n                \"created_at\": \"2016-12-13T05:45:56.000Z\",\n                \"updated_at\": \"2016-12-13T05:45:56.000Z\"\n            },\n            {\n                \"id\": \"2855306\",\n                \"item_serial_no\": 28553,\n                \"image\": \"/i/28553/28553061/2855306_500.jpg\",\n                \"color\": \"深藍細格\",\n                \"size\": \"S,M,L,XL,XXL\",\n                \"created_at\": \"2016-12-13T05:45:52.000Z\",\n                \"updated_at\": \"2016-12-13T05:45:52.000Z\"\n            },\n            {\n                \"id\": \"2856505\",\n                \"item_serial_no\": 28565,\n                \"image\": \"/i/28565/28565051/2856505_500.jpg\",\n                \"color\": \"黑色\",\n                \"size\": \"S,M,L,XL,XXL\",\n                \"created_at\": \"2016-12-13T05:45:44.000Z\",\n                \"updated_at\": \"2016-12-13T05:45:44.000Z\"\n            }\n        ]\n    },\n    {\n        \"combination_id\": 3,\n        \"item_ids\": \"2813704,2835208,2846602\",\n        \"details\": [\n            {\n                \"id\": \"2813704\",\n                \"item_serial_no\": 28137,\n                \"image\": \"/i/28137/28137041/2813704_500.jpg\",\n                \"color\": \"黑色\",\n                \"size\": \"S,M,L,XL,XXL\",\n                \"created_at\": \"2016-12-13T05:45:50.000Z\",\n                \"updated_at\": \"2016-12-13T05:45:50.000Z\"\n            },\n            {\n                \"id\": \"2835208\",\n                \"item_serial_no\": 28352,\n                \"image\": \"/i/28352/28352081/2835208_500.jpg\",\n                \"color\": \"黑色\",\n                \"size\": \"22,23,24,25,26,27,28,29,30\",\n                \"created_at\": \"2016-12-13T05:45:55.000Z\",\n                \"updated_at\": \"2016-12-13T05:45:55.000Z\"\n            },\n            {\n                \"id\": \"2846602\",\n                \"item_serial_no\": 28466,\n                \"image\": \"/i/28466/28466021/2846602_500.jpg\",\n                \"color\": \"深藍\",\n                \"size\": \"S,M,L,XL\",\n                \"created_at\": \"2016-12-13T05:45:45.000Z\",\n                \"updated_at\": \"2016-12-13T05:45:45.000Z\"\n            }\n        ]\n    },\n    {\n        \"combination_id\": 4,\n        \"item_ids\": \"2812205,2837406,2892503\",\n        \"details\": [\n            {\n                \"id\": \"2812205\",\n                \"item_serial_no\": 28122,\n                \"image\": \"/i/28122/28122051/2812205_500.jpg\",\n                \"color\": \"黑色\",\n                \"size\": \"S,M,L,XL,XXL\",\n                \"created_at\": \"2016-12-13T05:45:50.000Z\",\n                \"updated_at\": \"2016-12-13T05:45:50.000Z\"\n            },\n            {\n                \"id\": \"2837406\",\n                \"item_serial_no\": 28374,\n                \"image\": \"/i/28374/28374061/2837406_500.jpg\",\n                \"color\": \"藍綠彩格\",\n                \"size\": \"S,M,L,XL,XXL\",\n                \"created_at\": \"2016-12-13T05:45:49.000Z\",\n                \"updated_at\": \"2016-12-13T05:45:49.000Z\"\n            },\n            {\n                \"id\": \"2892503\",\n                \"item_serial_no\": 28925,\n                \"image\": \"/i/28925/28925031/2892503_500.jpg\",\n                \"color\": \"藏青\",\n                \"size\": \"F\",\n                \"created_at\": \"2016-12-13T05:45:43.000Z\",\n                \"updated_at\": \"2016-12-13T05:45:43.000Z\"\n            }\n        ]\n    }\n ]",
+          "type": "json"
+        }
+      ]
+    },
+    "error": {
+      "fields": {
+        "Error 4xx": [
+          {
+            "group": "Error 4xx",
+            "optional": false,
+            "field": "ServerError",
+            "description": "<p>server internal error</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Error-Response:",
+          "content": "HTTP/1.1 500 error",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "../routes/api/favorites.js",
+    "groupTitle": "favorites"
+  },
+  {
     "type": "delete",
     "url": "/api/favorites/:combination_id",
     "title": "Remove",
